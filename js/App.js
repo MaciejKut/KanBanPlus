@@ -23,8 +23,9 @@ function generateTemplate(name, data, basicElement) {
 
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
-    'X-Client-Id': 'X-Client-Id',
-    'X-Auth-Token': 'X-Auth-Token'
+    'X-Client-Id': '3775',
+    'X-Auth-Token': '52cfcaa5ec9f044697fe95215f27b966',
+    'Content-Type': JSON,
 };
 
 fetch(baseUrl + '/board', {
@@ -36,6 +37,13 @@ fetch(baseUrl + '/board', {
     .then(function (resp) {
         setupColumns(resp.columns);
     });
+
+function setupColumns(columns) {
+    columns.forEach(function (column) {
+        var col = new Column(column.id, column.name);
+        board.addColumn(col);
+    });
+}
 
 // TWORZENIE NOWYCH EGZEMPLARZY KOLUMN
 var todoColumn = new Column('Do zrobienia');
