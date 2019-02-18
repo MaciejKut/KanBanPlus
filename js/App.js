@@ -21,11 +21,11 @@ function generateTemplate(name, data, basicElement) {
     return element;
 }
 
-var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
+var baseUrl = 'https://cors-anywhere.herokuapp.com/' + 'kodilla.com/pl/bootcamp-api';
 var myHeaders = {
-    'X-Client-Id': '3775',
-    'X-Auth-Token': '52cfcaa5ec9f044697fe95215f27b966'
-    // 'Content-Type': 'JSON'
+    "x-client-id": "3775",
+    "x-auth-token": "52cfcaa5ec9f044697fe95215f27b966",
+    "cache-control": "no-cache"
 };
 fetch(baseUrl + '/board', {
         headers: myHeaders
