@@ -51,26 +51,3 @@ function setupCards(col, cards) {
         col.addCard(cardObj);
     })
 }
-
-
-// TWORZENIE NOWYCH EGZEMPLARZY KOLUMN
-var todoColumn = new Column('Do zrobienia');
-var doingColumn = new Column('W trakcie');
-var doneColumn = new Column('Skończone');
-
-// DODAWANIE KOLUMN DO TABLICY
-board.addColumn(todoColumn);
-board.addColumn(doingColumn);
-board.addColumn(doneColumn);
-
-// TWORZENIE NOWYCH EGZEMPLARZY KART
-var card1 = new Card('Nowe zadanie');
-var card2 = new Card('stworzyc tablice kanban');
-var card3 = new Card('stworzyc tablice kanban');
-var card4 = new Card('stworzyc tablice kanban');
-
-// DODAWANIE KART DO KOLUMN
-todoColumn.addCard(card1);
-doingColumn.addCard(card2);
-doneColumn.addCard(card3);
-doneColumn.addCard(card4);
